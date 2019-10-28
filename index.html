@@ -15,8 +15,27 @@
 
       <nav id="nav-bar">
         <ul>
-          <li><a class="nav-link" href="#products">Products</a></li>
+          <li><a href="#header" class="nav-link">Today's Deals</a></li>
+          <li id="products-link" class="nested_list">
+            <a class="nav-link" href="#products">Products</a>
+            <ul>
+              <li><a class="nav-link" href="#header">Shop White Teas</a></li>
+              <br />
+              <li><a class="nav-link" href="#header">Shop Green Teas</a></li>
+              <br />
+              <li><a class="nav-link" href="#header">Shop Oolong Teas</a></li>
+              <br />
+              <li><a class="nav-link" href="#header">Shop Black Teas</a></li>
+              <br />
+              <li><a class="nav-link" href="#header">Shop All Teas</a></li>
+            </ul>
+          </li>  <!-- End .nested_list -->
           <li><a class="nav-link" href="#about">About Us</a></li>
+          <li id="signin-link"><a href="#header" class="nav-link">Sign In</a></li>
+          <li id="search_container">
+            <input type="text" id="search" placeholder="Search...">
+            <label for="search">&#x1f50d;&#xFE0E;</label>   <!-- &#x1f50d; = magnify glass  |  &#xFE0E; = prevents from displaying as emoji -->
+          </li>
         </ul>
       </nav>
     </header>
@@ -132,6 +151,7 @@
       </p>
     </footer>
 
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="script.js"></script>
   </body>

@@ -71,6 +71,53 @@ h2, h3 {
   padding: 10px 15px;
   text-decoration: none;
 }
+
+#signin-link {
+  position: absolute;
+  right: 0px;  /* Position 'Sign In' link to the right */
+}
+
+.nested_list ul {
+  display: none;  /* Hide the nested list by default */
+
+  position: absolute;
+  top: 53px;
+  left: 180px;
+  margin: 0px;
+  padding: 0px;
+  line-height: 2rem;
+  background: green;
+}
+
+#search_container {
+  position: absolute;
+  top: 12px;
+  right: 100px;  /* Position search bar to the left of 'Sign In' link */
+}
+
+#search_container input[type="text"] {
+  padding: 10px;
+  background: none;
+  border: none;
+  width: 80px;
+  transition: width 1s;
+}
+
+#search_container input[type="text"]:focus {
+  width: 120px;
+  border-bottom: 1px solid white;
+  outline: none;
+}
+
+#search_container input[type="text"]::placeholder {
+  color: white;
+  font-weight: bold;
+}
+
+#search_container label {
+  color: white;
+  cursor: pointer;
+}
 /* ########## End Navbar ########## */
 
 
