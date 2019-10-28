@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>@import url('https://fonts.googleapis.com/css?family=Pacifico|Roboto+Condensed:400,400i,700&display=swap');</style>
     <link rel="stylesheet" href="styles.css">
     <title>Product Landing Page</title>
@@ -24,7 +24,78 @@
     <main>
       <!-- ********** Products section ********** -->
       <section id="products">
-        <!-- Create carousel for products -->
+        <div class="slideshow-container">
+          <div class="product-slide slide-right">
+            <h3>White Tea</h3>
+            <div class="product">
+              <img src="http://www.rivertea.com/1228/pai-mu-tan-peony-china-white-tea.jpg" alt="Cup of white tea">
+              <ul>
+                <li>Least processed of the true teas and undergoes only one simple manufacturing process</li>
+                <li>Light yellow in color but some varieties can have hints of green</li>
+                <li>One of the more mild-flavored true teas</li>
+                <li>Has floral and fruity undertones that add a natural sweetness</li>
+                <li>The two popular varieties are Silver Needle and White Peony</li>
+              </ul>
+            </div>  <!-- End .product -->
+            <button class="shop_btn">Shop</button>
+          </div>  <!-- End .product-slide -->
+
+          <div class="product-slide slide-right">
+            <h3>Green Tea</h3>
+             <div class="product">
+               <img src="https://yourmedicalsource.com/sites/default/files/iStock-610747890.jpg" alt="Cup of green tea">
+               <ul>
+                 <li>Green tea leaves undergo a multi-step production procsss but like white tea leaves, don't undergo an oxidation process</li>
+                 <li>Most are light green or slightly yellow in color</li>
+                 <li>Chinese green teas are pan fried to produce roasted nutty flavors</li>
+                 <li>Japanese green teas are steamed to preserve vegetal and herbaceous flavors</li>
+                 <li>Popular varieties include gunpowder, matcha, genmaicha, and sencha green teas</li>
+               </ul>
+             </div>  <!-- End .product -->
+            <button class="shop_btn">Shop</button>
+          </div>  <!-- End .product-slide -->
+
+          <div class="product-slide slide-right">
+            <h3>Oolong Tea</h3>
+            <div class="product">
+              <img src="http://www.rivertea.com/1401/formosa-choicest-taiwan-oolong-tea.jpg" alt="Cup of oolong tea">
+              <ul>
+                <li>Known as 'wulong tea' in China</li>
+                <li>Semi-oxidized tea that's deep amber or light green in color and offers a floral flavor with a smooth finish that results in medium-bodied taste</li>
+                <li>Oolong teas are produced solely in China and Taiwan and are often named based on the region they're cultivated</li>
+                <li>The least oxidized oolong teas are known as pouchongs and one of the most heavily oxidized oolong tea is Da Hong Pao</li>
+              </ul>
+            </div>  <!-- End .product -->
+            <button class="shop_btn">Shop</button>
+          </div>  <!-- End .product-slide -->
+
+          <div class="product-slide slide-right">
+            <h3>Black Tea</h3>
+            <div class="product">
+              <img src="http://www.caffeine-content.com/images/caffeine-content/black-tea-cup-1-small.jpg" alt="Cup of black tea">
+              <ul>
+                <li>The most popular type of tea in the West</li>
+                <li>Black teas are most commonly produced in China and on the Indian continent</li>
+                <li>The taste can be vastly different depending on the specific tea leaves and blend</li>
+                <li>The growing regions in India that produce the largest amounts of black tea include Assam and Darjeeling</li>
+                <li>The third largest growing region is Nilgiri in Sri Lanki, formerly known as Ceylon</li>
+              </ul>
+            </div>  <!-- End .product -->
+            <button class="shop_btn">Shop</button>
+          </div>  <!-- End .product-slide -->
+
+          <!-- Previous and next buttons -->
+          <a id="prev">&lt;</a>
+          <a id="next">&gt;</a>
+        </div>  <!-- End .slideshow-container -->
+
+        <!-- Dots/ circles -->
+        <div class="dots-container">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>  <!-- End .dots-container -->
       </section>  <!-- End #products -->
 
       <!-- ********** About section ********** -->
@@ -50,5 +121,8 @@
         Created by Vivian Seto for Product Landing Page project on <a href="https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page/">freeCodeCamp</a>. Information on this page taken from <a href="https://www.cupandleaf.com/blog/types-of-tea" target="_blank">Cup & Leaf</a>
       </p>
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
