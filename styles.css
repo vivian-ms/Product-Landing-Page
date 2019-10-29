@@ -161,62 +161,15 @@ iframe {
 
 
 /* ########## Welcome Offer ########## */
-#offer, #form {
+#modal_button {
   position: fixed;
+  right: 10px;
   bottom: 10px;
-  right: 15px;
+}
 
-  border-radius: 15px;
-  margin: 0px;
-  padding: 10px;
+.modal-content {
   background: green;
   color: white;
-}
-
-#offer {
-  width: 250px;
-  text-align: center;
-  cursor: pointer;
-}
-
-#form {
-  display: none;  /* Initially hide form */
-
-  width: 500px;
-  text-align: center;
-}
-
-.close {
-  position: absolute;
-  top: 5px;
-  right: 15px;
-  cursor: pointer;
-}
-
-#email {
-  padding: 10px;
-  border-radius: 10px;
-  width: 350px;
-}
-
-#email::placeholder {
-  font-weight: bold;
-}
-
-#submit {
-  margin-left: 20px;
-  padding: 10px;
-  border-radius: 10px;
-
-  font-weight: bold;
-  font-family: 'Comic Sans MS';
-  color: green;
-}
-
-.disclaimer {
-  font-size: 0.7rem;
-  margin-top: 10px;
-  color: lightgrey;
 }
 /* ########## End Welcome Offer ########## */
 
@@ -234,6 +187,12 @@ iframe {
     background: transparent;
     border: none;
     outline: none;
+  }
+
+  #modal_button {
+    position: fixed;
+    right: 10px;
+    bottom: 40px;
   }
 }
 /* ########## End media query ########## */

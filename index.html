@@ -126,7 +126,7 @@
                     <li>The two popular varieties are Silver Needle and White Peony</li>
                   </ul>
                 </div>  <!-- End white tea .tab-pane -->
-                
+
                 <!-- Green tea .tab-pane -->
                 <div id="green_tea" class="tab-pane fade" role="tabpanel">
                   <ul>
@@ -183,14 +183,30 @@
     </main>
 
     <!-- ********** Welcome Offer ********** -->
-    <p id="offer">Click for welcome offer</p>
-    <form id="form" action="https://www.freecodecamp.com/email-submit">
-      <span class="close">X</span>
-      <p>Sign up today and get a welcome discount</p>
-      <input type="email" id="email" name="email" placeholder="Enter your email here" required>
-      <input type="submit" id="submit" value="Get Code">
-      <p class="disclaimer">*Limited time offer. New customers only</p>
-    </form>
+    <button type="button" id="modal_button" class="btn btn-success" data-toggle="modal" data-target="#welcome_offer">Welcome Offer</button>
+
+    <div id="welcome_offer" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="welcome_offer_title" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 id="welcome_offer_title" class="modal-title">Welcome Offer</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>  <!-- End .modal-header -->
+          <div class="modal-body">
+            <p>Sign up today and get a welcome discount</p>
+            <form id="form" class="form-row" action="https://www.freecodecamp.com/email-submit">
+              <input type="email" id="email" class="form-control col" name="email" placeholder="Enter your email here" required>
+              <input type="submit" id="submit" class="btn btn-secondary col-auto ml-1" value="Get Code">
+            </form>
+          </div>  <!-- End .modal-body -->
+          <div class="modal-footer">
+            <small class="muted">*Limited time offer. New customers only</small>
+          </div>  <!-- End .modal-footer -->
+        </div>  <!-- End .modal-content -->
+      </div>  <!-- End ,modal-dialog -->
+    </div>  <!-- End .modal -->
 
     <footer>
       <p class="author">
