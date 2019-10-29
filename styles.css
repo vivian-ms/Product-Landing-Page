@@ -90,7 +90,7 @@ input[type=search]::placeholder {
 
 /* ########## Carousel ########## */
 .carousel {
-  max-width: 500px;
+  width: 500px;
   margin: 10px auto;
 }
 
@@ -107,6 +107,26 @@ input[type=search]::placeholder {
   bottom: -10px;
 }
 /* ########## End carousel ########## */
+
+
+
+/* ########## Tab content ########## */
+.tab-content {
+  overflow: auto;
+}
+
+.tab-pane {
+  padding: 20px;
+}
+
+.tab-pane ul {
+  line-height: 2rem;
+}
+
+#tabs_div {
+  height: 330px;
+}
+/* ########## End tab content ########## */
 
 
 
