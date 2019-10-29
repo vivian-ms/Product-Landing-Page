@@ -3,41 +3,50 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>@import url('https://fonts.googleapis.com/css?family=Pacifico|Roboto+Condensed:400,400i,700&display=swap');</style>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto+Condensed:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>Product Landing Page</title>
   </head>
   <body>
-    <header id="header">
-      <img id="header-img" src="http://www.dailynews.lk/sites/default/files/news/2017/04/02/z_p08-For-01.jpg" alt="Pouring tea pot in front of a tea field">
+    <header id="header" class="position-relative">
+      <img id="header-img" class="position-relative" src="http://www.dailynews.lk/sites/default/files/news/2017/04/02/z_p08-For-01.jpg" alt="Pouring tea pot in front of a tea field">
 
-      <h1 id="title">Real Good Tea</h1>
+      <h1 id="title" class="position-absolute my-auto text-center">Real Good Tea</h1>
 
-      <nav id="nav-bar">
-        <ul>
-          <li><a href="#header" class="nav-link">Today's Deals</a></li>
-          <li id="products-link" class="nested_list">
-            <a class="nav-link" href="#products">Products</a>
-            <ul>
-              <li><a class="nav-link" href="#header">Shop White Teas</a></li>
-              <br />
-              <li><a class="nav-link" href="#header">Shop Green Teas</a></li>
-              <br />
-              <li><a class="nav-link" href="#header">Shop Oolong Teas</a></li>
-              <br />
-              <li><a class="nav-link" href="#header">Shop Black Teas</a></li>
-              <br />
-              <li><a class="nav-link" href="#header">Shop All Teas</a></li>
-            </ul>
-          </li>  <!-- End .nested_list -->
-          <li><a class="nav-link" href="#about">About Us</a></li>
-          <li id="signin-link"><a href="#header" class="nav-link">Sign In</a></li>
-          <li id="search_container">
-            <input type="text" id="search" placeholder="Search...">
-            <label for="search">&#x1f50d;&#xFE0E;</label>   <!-- &#x1f50d; = magnify glass  |  &#xFE0E; = prevents from displaying as emoji -->
-          </li>
-        </ul>
-      </nav>
+      <nav id="nav-bar" class="navbar navbar-expand-md fixed-top navbar-dark">
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapsable_navbar" aria-controls="collapsable_navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsable_navbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#header">Today's Deals</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a id="nav_dropdown" class="nav-link dropdown-toggle" href="#header" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+              <div class="dropdown-menu" aria-labelledby="nav_dropdown">
+                <a class="dropdown-item" href="#header">Shop White Tea</a>
+                <a class="dropdown-item" href="#header">Shop Green Tea</a>
+                <a class="dropdown-item" href="#header">Shop Oolong Tea</a>
+                <a class="dropdown-item" href="#header">Shop Black Tea</a>
+                <a class="dropdown-item" href="#header">Shop All Teas</a>
+              </div>  <!-- End .dropdown-menu -->
+            </li>  <!-- End .nav-item .dropdown -->
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+          </ul>  <!-- End .navbar-nav -->
+          <form class="form-inline ml-auto">
+            <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            <button class="btn" type="submit">
+              <span class="fa fa-search"></span>
+              <span class="sr-only">Search</span>
+            </button>
+          </form>
+        </div>  <!-- End .navbar-collapse -->
+      </nav>  <!-- End .navbar -->
     </header>
 
     <main>
@@ -152,7 +161,9 @@
     </footer>
 
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     <script src="script.js"></script>
   </body>
 </html>

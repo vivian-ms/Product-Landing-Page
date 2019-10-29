@@ -1,15 +1,6 @@
 var slideIndex = 0;
 
 $(function() {
-  // Event listener for nested menu
-  $('.nested_list').on('mouseenter', function(evt) {
-    $(this).children('ul').slideDown();
-  });
-
-  $('.nested_list ul').on('mouseleave', function(evt) {
-    $(this).slideUp();
-  });
-
   // Show the 1st slide on page ready
   showSlides(slideIndex);
 
