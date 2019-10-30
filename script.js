@@ -1,93 +1,33 @@
-var slideIndex = 0;
-
 $(function() {
-  // Event listener for nested menu
-  $('.nested_list').on('mouseenter', function(evt) {
-    $(this).children('ul').slideDown();
+  $('#nav-bar .nav-item:not(.dropdown)').on('click', function(evt) {
+    // Collapse navbar after clicking nav item (except the one for dropdown menu)
+    $('.navbar-collapse').collapse('hide');
   });
 
-  $('.nested_list ul').on('mouseleave', function(evt) {
-    $(this).slideUp();
+  $('.dropdown-item').on('click', function(evt) {
+    // Collapse navbar after click
+    $('.navbar-collapse').collapse('hide');
+
+    // Use dropdown items as indicators for carousel
+    let index = $('.dropdown-item').index($(this));
+    $('#product_slides').carousel(index);
   });
 
-  // Show the 1st slide on page ready
-  showSlides(slideIndex);
-
-  // Event listener for previous button
-  $('#prev').on('click', () => {
-    slideIndex += -1;
-    showSlides(slideIndex);
+  // Prevent search form from submitting
+  $('.form inline').on('submit', function(evt) {
+    evt.preventDefault();
   });
 
-  // Event listener for next button
-  $('#next').on('click', () => {
-    slideIndex += 1;
-    showSlides(slideIndex);
+  // Sync tab-content with carousel
+  $('#product_slides').on('slid.bs.carousel', function(evt) {
+    let tabs = $('.nav-tabs a');
+    $(tabs[evt.to]).tab('show');
   });
 
-  // Event listener for each dot/circle
-  let dots = $('.dot');
-  for (let i = 0; i < dots.length; i++) {
-    $(dots[i]).on('click', () => {
-      slideIndex = i;
-      showSlides(slideIndex);
-    });
-  };
-
-  // Automatically change slides every 5s
-  setInterval(() => {
-    $('#next').click();
-  }, 5000);
-
-  // Event listener to open welcome offer
-  $('#offer').on('click', () => {
-    $('#offer').fadeOut('slideDown', () => {
-      $('#form').fadeIn('slow');
-    });
-  });
-
-  // Event listener to close welcome offer
-  $('.close').on('click', () => {
-    $('#form').fadeOut('slow', () => {
-      $('#offer').fadeIn('slow');
-    });
+  // Use nav-tabs as indicators for carousel
+  $('.nav-tabs a').on('click', function(evt) {
+    let tabs = $('.nav-tabs a');
+    let index = tabs.index($(this));
+    $('#product_slides').carousel(index);
   });
 });
-
-
-
-function showSlides(n) {
-  let slides = $('.product-slide');
-  let dots = $('.dot');
-
-  // If n > (slides.length - 1), go back to beginning
-  if (n > (slides.length - 1)) {
-    slideIndex = 0;
-  }
-
-  // If n < 0, go to the end of slides
-  if (n < 0) {
-    slideIndex = slides.length - 1;
-  }
-
-  // Remove .slide-right and add .slide-left if scrolling backwards
-  let previousSlide = $('.dot').index($('.active'));
-
-  if (
-    (slideIndex !== 0 && previousSlide > slideIndex) ||
-    (slideIndex === 0 & previousSlide === 1) ||
-    (previousSlide === 0 && slideIndex === 3)
-  ) {
-    $(slides).removeClass('slide-right').addClass('slide-left');
-  } else {
-    $(slides).removeClass('slide-left').addClass('slide-right');
-  }
-
-  // Hide all slides and only show the one corresponding to slideIndex
-  $(slides).css('display', 'none');
-  $(slides[slideIndex]).css('display', 'block');
-
-  // Remove .active on all dots and only add .active to the dot corresponding to slideIndex
-  $(dots).removeClass('active');
-  $(dots[slideIndex]).addClass('active');
-}

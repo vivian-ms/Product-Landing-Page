@@ -3,118 +3,165 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>@import url('https://fonts.googleapis.com/css?family=Pacifico|Roboto+Condensed:400,400i,700&display=swap');</style>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto+Condensed:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>Product Landing Page</title>
   </head>
   <body>
-    <header id="header">
-      <img id="header-img" src="http://www.dailynews.lk/sites/default/files/news/2017/04/02/z_p08-For-01.jpg" alt="Pouring tea pot in front of a tea field">
+    <header id="header" class="position-relative">
+      <img id="header-img" class="position-relative" src="http://www.dailynews.lk/sites/default/files/news/2017/04/02/z_p08-For-01.jpg" alt="Pouring tea pot in front of a tea field">
 
-      <h1 id="title">Real Good Tea</h1>
+      <h1 id="title" class="position-absolute my-auto text-center">Real Good Tea</h1>
 
-      <nav id="nav-bar">
-        <ul>
-          <li><a href="#header" class="nav-link">Today's Deals</a></li>
-          <li id="products-link" class="nested_list">
-            <a class="nav-link" href="#products">Products</a>
-            <ul>
-              <li><a class="nav-link" href="#header">Shop White Teas</a></li>
-              <br />
-              <li><a class="nav-link" href="#header">Shop Green Teas</a></li>
-              <br />
-              <li><a class="nav-link" href="#header">Shop Oolong Teas</a></li>
-              <br />
-              <li><a class="nav-link" href="#header">Shop Black Teas</a></li>
-              <br />
-              <li><a class="nav-link" href="#header">Shop All Teas</a></li>
-            </ul>
-          </li>  <!-- End .nested_list -->
-          <li><a class="nav-link" href="#about">About Us</a></li>
-          <li id="signin-link"><a href="#header" class="nav-link">Sign In</a></li>
-          <li id="search_container">
-            <input type="text" id="search" placeholder="Search...">
-            <label for="search">&#x1f50d;&#xFE0E;</label>   <!-- &#x1f50d; = magnify glass  |  &#xFE0E; = prevents from displaying as emoji -->
-          </li>
-        </ul>
-      </nav>
+      <nav id="nav-bar" class="navbar navbar-expand-md fixed-top navbar-dark">
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapsable_navbar" aria-controls="collapsable_navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsable_navbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#header">Today's Deals</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a id="nav_dropdown" class="nav-link dropdown-toggle" href="#header" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+              <div class="dropdown-menu" aria-labelledby="nav_dropdown">
+                <a class="dropdown-item" href="#products">Shop White Tea</a>
+                <a class="dropdown-item" href="#products">Shop Green Tea</a>
+                <a class="dropdown-item" href="#products">Shop Oolong Tea</a>
+                <a class="dropdown-item" href="#products">Shop Black Tea</a>
+                <a class="dropdown-item" href="#products">Shop All Teas</a>
+              </div>  <!-- End .dropdown-menu -->
+            </li>  <!-- End .nav-item .dropdown -->
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+          </ul>  <!-- End .navbar-nav -->
+          <form class="form-inline ml-auto">
+            <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            <button class="btn" type="submit">
+              <span class="fa fa-search"></span>
+              <span class="sr-only">Search</span>
+            </button>
+          </form>
+        </div>  <!-- End .navbar-collapse -->
+      </nav>  <!-- End .navbar -->
     </header>
 
     <main>
       <!-- ********** Products section ********** -->
       <section id="products">
-        <div class="slideshow-container">
-          <div class="product-slide slide-right">
-            <h3>White Tea</h3>
-            <div class="product">
-              <img src="http://www.rivertea.com/1228/pai-mu-tan-peony-china-white-tea.jpg" alt="Cup of white tea">
-              <ul>
-                <li>Least processed of the true teas and undergoes only one simple manufacturing process</li>
-                <li>Light yellow in color but some varieties can have hints of green</li>
-                <li>One of the more mild-flavored true teas</li>
-                <li>Has floral and fruity undertones that add a natural sweetness</li>
-                <li>The two popular varieties are Silver Needle and White Peony</li>
-              </ul>
-            </div>  <!-- End .product -->
-            <button class="shop_btn">Shop</button>
-          </div>  <!-- End .product-slide -->
+        <div class="container-fluid mt-lg-3">
+          <div class="row align-items-center">
+            <div id="product_slides" class="carousel slide col-lg" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#product_slides" data-slide-to="0" class="active"></li>
+                <li data-target="#product_slides" data-slide-to="1"></li>
+                <li data-target="#product_slides" data-slide-to="2"></li>
+                <li data-target="#product_slides" data-slide-to="3"></li>
+              </ol>  <!-- End .carousel-indicators -->
 
-          <div class="product-slide slide-right">
-            <h3>Green Tea</h3>
-             <div class="product">
-               <img src="https://yourmedicalsource.com/sites/default/files/iStock-610747890.jpg" alt="Cup of green tea">
-               <ul>
-                 <li>Green tea leaves undergo a multi-step production procsss but like white tea leaves, don't undergo an oxidation process</li>
-                 <li>Most are light green or slightly yellow in color</li>
-                 <li>Chinese green teas are pan fried to produce roasted nutty flavors</li>
-                 <li>Japanese green teas are steamed to preserve vegetal and herbaceous flavors</li>
-                 <li>Popular varieties include gunpowder, matcha, genmaicha, and sencha green teas</li>
-               </ul>
-             </div>  <!-- End .product -->
-            <button class="shop_btn">Shop</button>
-          </div>  <!-- End .product-slide -->
+              <div class="carousel-inner">
+                <!-- White tea .carousel-item -->
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="https://foodal.com/wp-content/uploads/2016/10/cup-of-white-tea.jpg" alt="Cup of white tea">
+                  <div class="carousel-caption">
+                    <button type="button" class="btn btn-success">Shop White Tea</button>
+                  </div>
+                </div>   <!-- End white tea .carousel-item -->
 
-          <div class="product-slide slide-right">
-            <h3>Oolong Tea</h3>
-            <div class="product">
-              <img src="http://www.rivertea.com/1401/formosa-choicest-taiwan-oolong-tea.jpg" alt="Cup of oolong tea">
-              <ul>
-                <li>Known as 'wulong tea' in China</li>
-                <li>Semi-oxidized tea that's deep amber or light green in color and offers a floral flavor with a smooth finish that results in medium-bodied taste</li>
-                <li>Oolong teas are produced solely in China and Taiwan and are often named based on the region they're cultivated</li>
-                <li>The least oxidized oolong teas are known as pouchongs and one of the most heavily oxidized oolong tea is Da Hong Pao</li>
-              </ul>
-            </div>  <!-- End .product -->
-            <button class="shop_btn">Shop</button>
-          </div>  <!-- End .product-slide -->
+                <!-- Green tea .carousel-item -->
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="https://media.mnn.com/assets/images/2016/03/Green-Mug-Green-Tea-Leaves-Plate-Bamboo.jpg.653x0_q80_crop-smart.jpg" alt="Cup of green tea">
+                  <div class="carousel-caption">
+                    <button type="button" class="btn btn-success">Shop Green Tea</button>
+                  </div>
+                </div>   <!-- End green tea .carousel-item -->
 
-          <div class="product-slide slide-right">
-            <h3>Black Tea</h3>
-            <div class="product">
-              <img src="http://www.caffeine-content.com/images/caffeine-content/black-tea-cup-1-small.jpg" alt="Cup of black tea">
-              <ul>
-                <li>The most popular type of tea in the West</li>
-                <li>Black teas are most commonly produced in China and on the Indian continent</li>
-                <li>The taste can be vastly different depending on the specific tea leaves and blend</li>
-                <li>The growing regions in India that produce the largest amounts of black tea include Assam and Darjeeling</li>
-                <li>The third largest growing region is Nilgiri in Sri Lanki, formerly known as Ceylon</li>
-              </ul>
-            </div>  <!-- End .product -->
-            <button class="shop_btn">Shop</button>
-          </div>  <!-- End .product-slide -->
+                <!-- Oolong tea .carousel-item -->
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg6b7MrSCXPQkTudzTblQuVsu5mgq5bJ8Kcfczcx0aRUboVgyKUQ" alt="Cup of oolong tea">
+                  <div class="carousel-caption">
+                    <button type="button" class="btn btn-success">Shop Oolong Tea</button>
+                  </div>
+                </div>   <!-- End oolong tea .carousel-item -->
 
-          <!-- Previous and next buttons -->
-          <a id="prev">&lt;</a>
-          <a id="next">&gt;</a>
-        </div>  <!-- End .slideshow-container -->
+                <!-- Black tea .carousel-item -->
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="https://d27pcll2dx97vv.cloudfront.net/info/wp-content/uploads/2018/07/Ginger-Black-Tea-1pc.jpg" alt="Cup of black tea">
+                  <div class="carousel-caption">
+                    <button type="button" class="btn btn-success">Shop Black Tea</button>
+                  </div>
+                </div>   <!-- End black tea .carousel-item -->
+              </div>  <!-- End .carousel-inner -->
 
-        <!-- Dots/ circles -->
-        <div class="dots-container">
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-        </div>  <!-- End .dots-container -->
+              <a class="carousel-control-prev" href="#product_slides" data-slide="prev" role="button">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>  <!-- End .carousel-control-prev -->
+
+              <a class="carousel-control-next" href="#product_slides" data-slide="next" role="button">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>  <!-- End .carousel-control-next -->
+            </div>  <!-- End .carousel -->
+
+            <div id="tabs_div" class="col-lg">
+              <nav class="nav nav-tabs">
+                <a class="nav-item nav-link active" href="#white_tea" data-toggle="tab">White Tea</a>
+                <a class="nav-item nav-link" href="#green_tea" data-toggle="tab">Green Tea</a>
+                <a class="nav-item nav-link" href="#oolong_tea" data-toggle="tab">Oolong Tea</a>
+                <a class="nav-item nav-link" href="#black_tea" data-toggle="tab">Black Tea</a>
+              </nav>  <!-- End .nav-tabs -->
+
+              <div class="tab-content">
+                <!-- White tea .tab-pane -->
+                <div id="white_tea" class="tab-pane fade active show" role="tabpanel">
+                  <ul>
+                    <li>Least processed of the true teas and undergoes only one simple manufacturing process</li>
+                    <li>Light yellow in color but some varieties can have hints of green</li>
+                    <li>One of the more mild-flavored true teas</li>
+                    <li>Has floral and fruity undertones that add a natural sweetness</li>
+                    <li>The two popular varieties are Silver Needle and White Peony</li>
+                  </ul>
+                </div>  <!-- End white tea .tab-pane -->
+
+                <!-- Green tea .tab-pane -->
+                <div id="green_tea" class="tab-pane fade" role="tabpanel">
+                  <ul>
+                    <li>Green tea leaves undergo a multi-step production procsss but like white tea leaves, don't undergo an oxidation process</li>
+                    <li>Most are light green or slightly yellow in color</li>
+                    <li>Chinese green teas are pan fried to produce roasted nutty flavors</li>
+                    <li>Japanese green teas are steamed to preserve vegetal and herbaceous flavors</li>
+                    <li>Popular varieties include gunpowder, matcha, genmaicha, and sencha green teas</li>
+                  </ul>
+                </div>  <!-- End green tea .tab-pane -->
+
+                <!-- Oolong tea .tab-pane -->
+                <div id="oolong_tea" class="tab-pane fade" role="tabpanel">
+                  <ul>
+                    <li>Known as 'wulong tea' in China</li>
+                    <li>Semi-oxidized tea that's deep amber or light green in color and offers a floral flavor with a smooth finish that results in medium-bodied taste</li>
+                    <li>Oolong teas are produced solely in China and Taiwan and are often named based on the region they're cultivated</li>
+                    <li>The least oxidized oolong teas are known as pouchongs and one of the most heavily oxidized oolong tea is Da Hong Pao</li>
+                  </ul>
+                </div>  <!-- End oolong tea .tab-pane -->
+
+                <!-- Black tea .tab-pane -->
+                <div id="black_tea" class="tab-pane fade" role="tabpanel">
+                  <ul>
+                    <li>The most popular type of tea in the West</li>
+                    <li>Black teas are most commonly produced in China and on the Indian continent</li>
+                    <li>The taste can be vastly different depending on the specific tea leaves and blend</li>
+                    <li>The growing regions in India that produce the largest amounts of black tea include Assam and Darjeeling</li>
+                    <li>The third largest growing region is Nilgiri in Sri Lanki, formerly known as Ceylon</li>
+                  </ul>
+                </div>  <!-- End black tea .tab-pane -->
+              </div>  <!-- End .tab-content -->
+            </div>  <!-- End #tabs_div -->
+          </div>  <!-- End .rows -->
+        </div>  <!-- End .container-fluid -->
       </section>  <!-- End #products -->
 
       <!-- ********** About section ********** -->
@@ -130,20 +177,36 @@
           The leaves of <i>Camellia sinensis</i> contain naturally occurring caffeine that's actually higher in concentration than in coffee beans. Coffee is only stronger than tea because it's more concentrated when brewed. The actual caffeine content in a cup of true tea varies largely depending on the production method.
         </p>
         <div class="video_container">
-          <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/WJcxBW9DkSs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/WJcxBW9DkSs" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </section>  <!-- End #about -->
     </main>
 
     <!-- ********** Welcome Offer ********** -->
-    <p id="offer">Click for welcome offer</p>
-    <form id="form" action="https://www.freecodecamp.com/email-submit">
-      <span class="close">X</span>
-      <p>Sign up today and get a welcome discount</p>
-      <input type="email" id="email" name="email" placeholder="Enter your email here" required>
-      <input type="submit" id="submit" value="Get Code">
-      <p class="disclaimer">*Limited time offer. New customers only</p>
-    </form>
+    <button type="button" id="modal_button" class="btn btn-success" data-toggle="modal" data-target="#welcome_offer">Welcome Offer</button>
+
+    <div id="welcome_offer" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="welcome_offer_title" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 id="welcome_offer_title" class="modal-title">Welcome Offer</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>  <!-- End .modal-header -->
+          <div class="modal-body">
+            <p>Sign up today and get a welcome discount</p>
+            <form id="form" class="form-row" action="https://www.freecodecamp.com/email-submit">
+              <input type="email" id="email" class="form-control col" name="email" placeholder="Enter your email here" required>
+              <input type="submit" id="submit" class="btn btn-secondary col-auto ml-1" value="Get Code">
+            </form>
+          </div>  <!-- End .modal-body -->
+          <div class="modal-footer">
+            <small class="muted">*Limited time offer. New customers only</small>
+          </div>  <!-- End .modal-footer -->
+        </div>  <!-- End .modal-content -->
+      </div>  <!-- End ,modal-dialog -->
+    </div>  <!-- End .modal -->
 
     <footer>
       <p class="author">
@@ -152,7 +215,9 @@
     </footer>
 
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     <script src="script.js"></script>
   </body>
 </html>
