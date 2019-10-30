@@ -67,6 +67,7 @@ body {
   width: 100px;
   border: none;
   background: transparent;
+  color: white;
   transition: 1s;
 }
 
