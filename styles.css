@@ -114,6 +114,7 @@ input[type=search]::placeholder {
 /* ########## Tab content ########## */
 .tab-content {
   overflow: auto;
+  height: 330px;
 }
 
 .tab-pane {
@@ -122,10 +123,6 @@ input[type=search]::placeholder {
 
 .tab-pane ul {
   line-height: 2rem;
-}
-
-#tabs_div {
-  height: 330px;
 }
 /* ########## End tab content ########## */
 
