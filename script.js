@@ -1,6 +1,6 @@
 $(function() {
-  $('#nav-bar .nav-item:not(.dropdown)').on('click', function(evt) {
-    // Collapse navbar after clicking nav item (except the one for dropdown menu)
+  // Collapse navbar after clicking nav item (except the one for dropdown menu) or clicking the page
+  $('#nav-bar .nav-item:not(.dropdown), #header-img, #title, main, footer').on('click', function(evt) {
     $('.navbar-collapse').collapse('hide');
   });
 
