@@ -1,211 +1,145 @@
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: 'Roboto Condensed', sans-serif;
-}
+  font-family: "Roboto Condensed", sans-serif; }
 
 body {
-  font-size: 16px;
-  background: #94AD31;
-  color: #4A31AD;
-}
+  background: #94ad31;
+  color: #4a31ad; }
 
-
-
-/* ########## Header ########## */
 #header {
-  box-shadow: 0px 0px 20px 10px #94AD31 inset;
-}
+  -webkit-box-shadow: 0px 0px 20px 10px #94ad31 inset;
+  box-shadow: 0px 0px 20px 10px #94ad31 inset; }
+  #header #header-img {
+    z-index: -1;
+    width: 100%;
+    height: 300px;
+    opacity: 0.75;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center; }
+  #header #title {
+    bottom: 30px;
+    left: 0px;
+    right: 0px;
+    letter-spacing: 0.8rem;
+    font-family: "Pacifico", cursive;
+    font-size: 3rem;
+    font-weight: bold; }
+  #header .navbar {
+    background: green; }
+    #header .navbar .navbar-nav .nav-link {
+      color: white;
+      padding-left: 10px; }
+      #header .navbar .navbar-nav .nav-link:hover {
+        background: #94ad31; }
+    #header .navbar .dropdown-menu {
+      background: green; }
+      @media screen and (max-width: 768px) {
+        #header .navbar .dropdown-menu {
+          background: transparent;
+          border: none;
+          outline: none; } }
+      #header .navbar .dropdown-menu .dropdown-item {
+        color: white; }
+        #header .navbar .dropdown-menu .dropdown-item:hover {
+          background: #94ad31; }
+    #header .navbar .form-inline input[type=search] {
+      width: 100px;
+      border: none;
+      background: transparent;
+      color: white;
+      -webkit-transition: 1s;
+      -o-transition: 1s;
+      transition: 1s; }
+      #header .navbar .form-inline input[type=search]:focus {
+        width: 150px;
+        border-bottom: 1px solid white;
+        background: transparent;
+        outline: none; }
+      #header .navbar .form-inline input[type=search]::-webkit-input-placeholder {
+        color: white; }
+      #header .navbar .form-inline input[type=search]:-ms-input-placeholder {
+        color: white; }
+      #header .navbar .form-inline input[type=search]::-ms-input-placeholder {
+        color: white; }
+      #header .navbar .form-inline input[type=search]::placeholder {
+        color: white; }
+    #header .navbar .form-inline .fa-search {
+      color: white; }
 
-#header-img {
-  z-index: -1;
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  object-position: center;
-  opacity: 0.75;
-}
-
-#title {
-  bottom: 30px;
-  left: 0px;
-  right: 0px;
-  font-family: 'Pacifico', cursive;
-  font-size: 3rem;
-  font-weight: bold;
-  letter-spacing: 0.8rem;
-}
-/* ########## End Header ########## */
-
-
-
-/* ########## Navbar ########## */
-.navbar {
-  background: green;
-}
-
-.navbar .navbar-nav .nav-link,
-.navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link:focus {
-  color: white;
-}
-
-.dropdown-menu {
-  background: green;
-}
-
-.dropdown-menu .dropdown-item {
-  color: white;
-}
-
-.dropdown-menu .dropdown-item:hover {
-  text-decoration: underline;
-  background: #94AD31;
-  color: #4A31AD;
-}
-
-.form-inline input[type=search] {
-  width: 100px;
-  border: none;
-  background: transparent;
-  color: white;
-  transition: 1s;
-}
-
-.form-inline input[type=search]:focus {
-  width: 150px;
-  border-bottom: 1px solid white;
-  background: transparent;
-  outline: none;
-}
-
-input[type=search]::placeholder {
-  color: white;
-}
-
-.fa-search {
-  color: white;
-}
-/* ########## End Navbar ########## */
-
-
-
-/* ########## Carousel ########## */
 .carousel {
   width: 500px;
   height: 280px;
-  margin: 10px auto;
-}
+  margin: 10px auto; }
+  .carousel .carousel-item {
+    height: 280px; }
+    .carousel .carousel-item img {
+      -o-object-fit: cover;
+      object-fit: cover;
+      opacity: 0.75; }
+  .carousel .carousel-indicators {
+    bottom: -10px; }
 
-.carousel-item {
-  height: 280px;
-}
-
-.carousel-item img {
-  object-fit: cover;
-  opacity: 0.75;
-}
-
-.carousel-indicators {
-  bottom: -10px;
-}
-/* ########## End carousel ########## */
-
-
-
-/* ########## Tab content ########## */
 .tab-content {
   overflow: auto;
-  height: 330px;
-}
+  height: 330px; }
+  .tab-content .tab-pane {
+    padding: 20px; }
+    .tab-content .tab-pane ul {
+      line-height: 2rem; }
 
-.tab-pane {
-  padding: 20px;
-}
-
-.tab-pane ul {
-  line-height: 2rem;
-}
-/* ########## End tab content ########## */
-
-
-
-/* ########## About Section ########## */
 #about {
   width: 95%;
   margin: 10px auto;
-  line-height: 2rem;
-}
+  line-height: 2rem; }
+  #about h2 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px; }
+  #about span {
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: bold; }
+  #about .about_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+  #about .text_container {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -ms-flex-preferred-size: 400px;
+    flex-basis: 400px;
+    margin-right: 20px; }
+  #about .video_container {
+    -ms-flex-preferred-size: 560px;
+    flex-basis: 560px;
+    height: 315px; }
+  #about iframe {
+    border: none;
+    border-radius: 20px; }
 
-#about h2 {
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#about span {
-  font-size: 1.1rem;
-  font-style: italic;
-  font-weight: bold;
-}
-
-.about_container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-}
-
-.text_container {
-  flex: 1;
-  flex-basis: 400px;
-  margin-right: 20px;
-}
-
-.video_container {
-  flex-basis: 560px;
-  height: 315px;
-}
-
-iframe {
-  border: none;
-  border-radius: 20px;
-}
-/* ########## End About Section ########## */
-
-
-
-/* ########## Welcome Offer ########## */
 #modal_button {
   position: fixed;
   right: 10px;
-  bottom: 10px;
-}
+  bottom: 10px; }
+  @media screen and (max-width: 768px) {
+    #modal_button {
+      position: fixed;
+      right: 10px;
+      bottom: 40px; } }
 
 .modal-content {
   background: green;
-  color: white;
-}
-/* ########## End Welcome Offer ########## */
-
-
+  color: white; }
 
 .author {
-  font-size: 0.7rem;
-}
-
-
-
-/* ########## Media query ########## */
-@media screen and (max-width: 768px) {
-  .dropdown-menu {
-    background: transparent;
-    border: none;
-    outline: none;
-  }
-
-  #modal_button {
-    position: fixed;
-    right: 10px;
-    bottom: 40px;
-  }
-}
-/* ########## End media query ########## */
+  font-size: 0.7rem; }
