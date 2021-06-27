@@ -1,5 +1,7 @@
 # Product-Landing-Page
- 
-Product landing page created for project at freeCodeCamp.
 
-Link to project - https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page
+Landing page for a tea shop created for freeCodeCamp.
+
+Link to project requirements - https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page
+
+Link to landing page - https://codepen.io/vivian-ms/full/jOOaPVQ
